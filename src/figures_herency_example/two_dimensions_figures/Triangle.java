@@ -25,6 +25,9 @@ public class Triangle extends TwoDimensionalFigures {
         this.height = height;
         this.base = base;
 
+        this.area = calculateArea();
+        this.perimeter = calculatePerimeter();
+
         this.side_a = 0;
         this.side_b = 0;
         this.side_c = 0;

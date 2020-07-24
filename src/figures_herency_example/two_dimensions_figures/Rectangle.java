@@ -5,7 +5,7 @@ import figures_herency_example.TwoDimensionalFigures;
 public class Rectangle extends TwoDimensionalFigures {
 
     private final double height;
-    private final double base;
+    protected final double base;
 
     public Rectangle(double height, double base) {
         this.height = height;
@@ -13,6 +13,10 @@ public class Rectangle extends TwoDimensionalFigures {
 
         this.area = calculateArea();
         this.perimeter = calculatePerimeter();
+    }
+
+    protected double getHeight(){
+        return this.height;
     }
 
     @Override

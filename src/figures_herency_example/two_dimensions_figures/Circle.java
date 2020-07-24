@@ -13,6 +13,14 @@ public class Circle extends TwoDimensionalFigures {
         this.perimeter = calculatePerimeter();
     }
 
+    protected double getRadio(){
+        return this.radio;
+    }
+
+    public void sayHello(){
+        System.out.println("Hello");
+    }
+
     @Override
     protected double calculateArea() {
         return Math.pow(this.radio, 2) * Math.PI;
