@@ -22,4 +22,9 @@ public class Circle extends TwoDimensionalFigures {
     protected double calculatePerimeter() {
         return this.radio * 2 * Math.PI;
     }
+
+    @Override
+    protected String information(){
+        return super.information() + ". Soy un círculo. Recibo cuál es mi radio";
+    }
 }

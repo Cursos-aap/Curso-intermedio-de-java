@@ -11,5 +11,8 @@ public abstract class TwoDimensionalFigures {
 
     protected abstract double calculateArea();
     protected abstract double calculatePerimeter();
+    protected String information(){
+        return "2D figure";
+    }
 
 }

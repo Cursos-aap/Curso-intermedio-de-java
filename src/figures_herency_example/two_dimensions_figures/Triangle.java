@@ -3,14 +3,14 @@ package figures_herency_example.two_dimensions_figures;
 import figures_herency_example.TwoDimensionalFigures;
 
 public class Triangle extends TwoDimensionalFigures {
-    private final float side_a;
-    private final float side_b;
-    private final float side_c;
+    private final double side_a;
+    private final double side_b;
+    private final double side_c;
 
-    private final float height;
-    private final float base;
+    private final double height;
+    private final double base;
 
-    public Triangle(float side_a, float side_b, float side_c) {
+    public Triangle(double side_a, double side_b, double side_c) {
         this.side_a = side_a;
         this.side_b = side_b;
         this.side_c = side_c;
@@ -21,7 +21,7 @@ public class Triangle extends TwoDimensionalFigures {
         this.base = 0;
     }
 
-    public Triangle(float height, float base) {
+    public Triangle(double height, double base) {
         this.height = height;
         this.base = base;
 
@@ -44,6 +44,10 @@ public class Triangle extends TwoDimensionalFigures {
             return Math.sqrt(s * (s - this.side_a) * (s - this.side_b) * (s - this.side_c));
         }
         return this.base * this.height / 2;
+    }
+    @Override
+    protected String information(){
+        return super.information() + ". Soy un triángulo. Recibo la base y la altura o mis tres lados";
     }
 
 }
