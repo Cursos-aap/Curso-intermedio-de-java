@@ -103,7 +103,7 @@ public class CesarEncryption {
         return stringBuilder.toString();
     }
 
-    private final String abc = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ 0123456789áéíóúÁÉÍÓÚüÜ";
+    private final String abc = "abcdefghijklmnñopqrstuvwxyz ";
     private final byte abc_length = (byte) abc.length();
 
     public String encryptByCesarWithAbc(String text, int displacement) {
@@ -113,9 +113,9 @@ public class CesarEncryption {
         for (char letter : text.toCharArray()) {
             index = (byte) abc.indexOf(letter);
             if(index == -1)
-                return "";
+                continue;
             temp = (short) (index + displacement % abc_length);
-            if (temp > abc_length)
+            if (temp >= abc_length)
                 temp = (short) (temp - abc_length);
             stringBuilder.append(abc.charAt(temp));
         }
